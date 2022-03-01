@@ -6,6 +6,10 @@
     <!-- 环境配置 -->
     <!-- 加载类路径下的属性文件 -->
     <properties resource="db.properties"/>
+    <!-- 自动扫描包下的实体类-->
+    <typeAliases>
+        <package name="com.rzhylj.entity"/>
+    </typeAliases>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -19,6 +23,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="mapper/StudentMapper.xml"/>
+        <package name="com.rzhylj.mapper"/>
     </mappers>
 </configuration>
