@@ -29,11 +29,10 @@ public interface EmployeeMapper {
     /**
      * 根据id修改员工信息
      *
-     * @param id
      * @param employee
      * @return
      */
-    public int updateEmployeeById(Integer id, Employee employee);
+    public int updateEmployeeById(Employee employee);
 
     /**
      * 根据id删除员工信息
