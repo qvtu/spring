@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rzhylj.mapper.StudentMapper">
+    <select id="findStudentByNameOrJobs" parameterType="student" resultType="student">
+        select * from mybatis_demo03
+        <where>
+            <if test="name !=null and name !='' ">
+                and name like concat('%',#{name},'%')
+            </if>
+            <if test="professional !=null and professional!= '' ">
+                and professional = #{professional}
+            </if>
+            <if test="id != null">
+                and id is not null
+            </if>
+        </where>
+    </select>
+
+    <select id="findStudentById" parameterType="integer" resultType="student">
+        select * from mybatis_demo03
+        <where>
+        <if test="id != 0 ">
+            id &lt; #{id}
+        </if>
+        </where>
+    </select>
+</mapper>
