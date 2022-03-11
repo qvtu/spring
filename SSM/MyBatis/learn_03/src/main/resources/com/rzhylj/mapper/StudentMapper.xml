@@ -6,7 +6,7 @@
     <select id="findStudentByNameOrJobs" parameterType="student" resultType="student">
         select * from mybatis_demo03
         <where>
-            <if test="sname !=null and name !='' ">
+            <if test="name !=null and name !='' ">
                 and name like concat('%',#{name},'%')
             </if>
             <if test="professional !=null and professional!= '' ">
