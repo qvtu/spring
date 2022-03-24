@@ -35,6 +35,17 @@ public class TestDemo {
         System.out.println(student);
     }
 
+    @Test
+    public void test02() {
+        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+        Student s1 = new Student();
+        s1.setS_id(2);
+        s1.setS_name("李雷");
+        s1.setS_age(21);
+        int flag = studentMapper.updateById(s1);
+        System.out.println(flag);
+    }
+
     @After
     public void after() {
         if (sqlSession != null) {
