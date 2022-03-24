@@ -13,6 +13,11 @@ import org.apache.ibatis.annotations.Select;
  * FileName: c_classMapper
  */
 public interface ClassMapper {
+    /**
+     * 查询班级内所有学生的信息
+     * @param c_id
+     * @return
+     */
     @Select("select * from c_class where id = #{c_id}")
     @Results({
             @Result(id = true, property = "c_id", column = "id"),
