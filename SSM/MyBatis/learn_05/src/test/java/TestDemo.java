@@ -1,4 +1,6 @@
+import com.rzhylj.entity.Cls;
 import com.rzhylj.entity.Student;
+import com.rzhylj.mapper.ClassMapper;
 import com.rzhylj.mapper.StudentMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -39,11 +41,22 @@ public class TestDemo {
     public void test02() {
         StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
         Student s1 = new Student();
-        s1.setS_id(2);
+        s1.setS_id(4);
         s1.setS_name("李雷");
         s1.setS_age(21);
         int flag = studentMapper.updateById(s1);
-        System.out.println(flag);
+        if (flag == 1) {
+            System.out.println("修改成功");
+        } else {
+            System.out.println("修改失败");
+        }
+    }
+
+    @Test
+    public void test03() {
+        ClassMapper classMapper = sqlSession.getMapper(ClassMapper.class);
+        Cls c = classMapper.findStudentById(2);
+        System.out.println(c);
     }
 
     @After
