@@ -1,4 +1,4 @@
-package com.rzhylj.testSpring;
+package com.rzhylj.test;
 
 import com.rzhylj.service.UserService;
 import org.springframework.context.ApplicationContext;
