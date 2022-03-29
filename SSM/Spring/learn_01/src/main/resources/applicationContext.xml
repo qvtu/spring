@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!-- 将指定类配置给Spring，让Spring创建HelloSpring对象的实例 -->
-    <bean id="userDAO" class="com.rzhylj.dao.Impl.UserDaoImpl"></bean>
+    <bean id="userMapper" class="com.rzhylj.mapper.Impl.UserMapperImpl"></bean>
     <bean id="userService" class="com.rzhylj.service.Impl.UserServiceImpl">
-        <property name="userDAO" ref="userDAO"></property>
+        <property name="userMapper" ref="userMapper"></property>
     </bean>
 </beans>

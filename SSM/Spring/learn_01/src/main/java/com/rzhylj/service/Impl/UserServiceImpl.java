@@ -1,6 +1,6 @@
 package com.rzhylj.service.Impl;
 
-import com.rzhylj.dao.UserDAO;
+import com.rzhylj.mapper.UserMapper;
 import com.rzhylj.service.UserService;
 
 /**
@@ -10,15 +10,15 @@ import com.rzhylj.service.UserService;
  * FileName: UserServiceImpl
  */
 public class UserServiceImpl implements UserService {
-    UserDAO userDAO;
+    UserMapper userMapper;
 
-    public void setUserDAO(UserDAO userDAO) {
-        this.userDAO = userDAO;
+    public void setUserMapper(UserMapper userMapper) {
+        this.userMapper = userMapper;
     }
 
     @Override
     public boolean login(String name, String password) {
-        return userDAO.login(name, password);
+        return userMapper.login(name, password);
     }
 
 }

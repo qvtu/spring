@@ -10,11 +10,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Date: 2022/3/29 0029 14:26
  * FileName: TestSpring
  */
-public class TestSpring {
+public class testSpring {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserService userService = (UserService) applicationContext.getBean("userService");
-        boolean flag = userService.login("张三", "123");
+        boolean flag = userService.login("张三", "1234");
         if (flag) {
             System.out.println("登录成功");
         } else {
