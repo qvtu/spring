@@ -10,9 +10,9 @@
         <module name="template" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="chapter06" target="16" />
+    <bytecodeTargetLevel target="16">
       <module name="learn_01" target="16" />
+      <module name="learn_02" target="16" />
       <module name="template" target="16" />
     </bytecodeTargetLevel>
   </component>
