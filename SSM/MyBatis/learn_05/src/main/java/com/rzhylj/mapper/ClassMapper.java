@@ -18,7 +18,6 @@ public interface ClassMapper {
             @Result(id = true, property = "c_id", column = "id"),
             @Result(property = "c_name", column = "classname"),
             @Result(property = "studentList", column = "id", many = @Many(select = "com.rzhylj.mapper.StudentMapper.findByCid"))
-
     })
     Cls findStudentById(Integer c_id);
 }
