@@ -13,6 +13,11 @@ import org.apache.ibatis.annotations.Update;
  * FileName: s_studentMapper
  */
 public interface StudentMapper {
+    /**
+     * 通过id查询学生的信息
+     * @param id
+     * @return
+     */
     @Select("select * from s_student where id =#{s_id}")
     @Results({
             @Result(id = true, property = "s_id", column = "id"),
@@ -22,6 +27,11 @@ public interface StudentMapper {
     })
     Student findById(Integer id);
 
+    /**
+     * 通过班级查询学生的信息
+     * @param s_cid
+     * @return
+     */
     @Select("select * from s_student where cid =#{s_cid}")
     @Results({
             @Result(id = true, property = "s_id", column = "id"),
@@ -31,6 +41,11 @@ public interface StudentMapper {
     })
     Student findByCid(Integer s_cid);
 
+    /**
+     * 通过id修改学生信息
+     * @param student
+     * @return
+     */
     @Update("update s_student set name = #{s_name},age=#{s_age} where id = #{s_id}")
     int updateById(Student student);
 }
