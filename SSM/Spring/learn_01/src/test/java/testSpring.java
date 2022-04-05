@@ -12,11 +12,6 @@ public class testSpring {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserService userService = (UserService) applicationContext.getBean("userService");
-        boolean flag = userService.login("张三", "1234");
-        if (flag) {
-            System.out.println("登录成功");
-        } else {
-            System.out.println("登录失败");
-        }
+        System.out.println(userService.login("张三","123"));
     }
 }

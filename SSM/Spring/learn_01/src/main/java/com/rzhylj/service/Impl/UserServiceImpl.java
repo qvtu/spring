@@ -17,8 +17,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean login(String name, String password) {
-        return userMapper.login(name, password);
+    public String login(String name, String password) {
+        boolean flag = userMapper.login(name, password);
+        if (flag) {
+            return "登录成功";
+        } else {
+            return "登录失败";
+        }
     }
-
 }

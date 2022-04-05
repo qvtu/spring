@@ -3,7 +3,7 @@ person:
   age: 21
   happy: true
   birth: 2022/4/4
-  maps: {k1: v1,k2: v2}
+  maps: { k1: v1,k2: v2 }
   lists:
     - code
     - music

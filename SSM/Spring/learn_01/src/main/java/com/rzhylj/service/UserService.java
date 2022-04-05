@@ -7,5 +7,5 @@ package com.rzhylj.service;
  * FileName: UserService
  */
 public interface UserService {
-    public boolean login(String name,String password);
+    public String login(String name,String password);
 }

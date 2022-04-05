@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.rzhylj</groupId>
-    <artifactId>s_2</artifactId>
+    <artifactId>s_3</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>s_2</name>
-    <description>s_2</description>
+    <name>s_3</name>
+    <description>s_3</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -21,15 +21,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
         </dependency>
     </dependencies>
 
