@@ -1,4 +1,4 @@
-package com.rzhylj.mapper.Impl;
+package com.rzhylj.mapper.impl;
 
 import com.rzhylj.mapper.UserMapper;
 
