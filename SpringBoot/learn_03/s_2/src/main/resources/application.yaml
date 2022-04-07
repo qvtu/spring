@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    username: root
+    password: nishengri
+    url: jdbc:mysql://localhost:3306/gokproject
+    driver-class-name: com.mysql.cj.jdbc.Driver
